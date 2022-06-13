@@ -2,6 +2,7 @@
 // given: 2x-4=0
 
 const solve_x = eq => {
+  eq = eq.replace(/(\-|\+)(?=[a-z])/, c=>"1"+c).replace(/^[a-z]/, c=>"1"+c)
   const sides = eq.split("=")
 
   const regex_int = /(\+|\-)?\d+(?![a-z])/g
@@ -32,5 +33,6 @@ console.log(solve_x("-1x-5=2x"))
 // future self
 // make this work
 // => x-2=0
+console.log(solve_x("x-2=0"))
 // currently needs to be like this to work
 // => 1x-2=0
