@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quad Equation ❌➕➖➗</title>
+<style>
+body,a,input{border-radius:20%;padding:10px;text-align:center;background-color:lightskyblue;color:white;}
+</style>
+<script>
+var a = 0, b = 0, c = 0, x1 = 0, x2 = 0;
+
+function abc(){
+a = prompt("Enter value of a: ");
+if(isNaN(a)){abc()}
+}
+
+function def(){
+b = prompt("Enter value of b: ");
+if(isNaN(b)){def()}
+}
+
+function ghi(){
+c = prompt("Enter value of c: ");
+if(isNaN(c)){ghi()}
+}
+
+function xyz(){
+if(a != 1){
+c = c/a ; 
+b = b/a ; 
+a = a/a ;
+}
+//alert("Values entered are\na = "+a+"\nb = "+b+"\nc = "+c+"\n\nIf values are correct procced and press CALCULATE")";
+alert("a = "+a);
+alert("b = "+b);
+alert("c = "+c);
+}
+
+function mno(){
+x1 = ((-1*b) + Math.sqrt(b**2 - 4*a*c))/2*a ;
+x2 = ((-1*b) - Math.sqrt(b**2 - 4*a*c))/2*a ;
+
+//show values
+if(isNaN(x1 || x2)){
+alert("No solution😭😭😭");
+}
+else {
+alert("Solution is:\n\n(x + "+x1*-1+")(x + "+x2*-1+") = 0\n\nx + "+x1*-1+" = 0 or x + "+x2*-1+" = 0\n\nx = "+x1+" or x = "+x2);
+}
+}
+</script>
+</head>
+<body>
+<h3>Quad Equation Calculator: by PK</h3>
+Click button to set value of :a, b and c
+<br>
+<input type="button" value="a" onClick="abc()" name="a"> x<sup>2</sup> +
+<input type="button" value="b" onClick="def()" name="b"> x +
+<input type="button" value="c" onClick="ghi()" name="c"> = 0
+<br/>
+<br/>
+<input type="button" value="Show values to calculate" onclick="xyz()">
+<br/>
+<br/>
+<input type="button" value="Start Calculating" onclick="mno()">
+</body>
+</html>
